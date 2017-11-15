@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas exercice 3</title>
+    <meta http-equiv="refresh" content="2; URL=index.html" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="draw" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('draw');
+    var ctx = c.getContext('2d');
+
+    // Commencement
+    ctx.beginPath();
+    ctx.moveTo(50,300);
+    ctx.lineTo(350,300);
+    ctx.lineTo(350,230);
+    ctx.lineTo(280,230);
+    ctx.lineTo(280,160);
+    ctx.lineTo(120,160);
+    ctx.lineTo(120,230);
+    ctx.lineTo(50,230);
+    ctx.lineTo(50,300);
+    ctx.fillStyle = '#00A552';
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    // roue cercle gauche
+    ctx.beginPath();
+    // Position 1 + 2 / 3 = grandeur / Math.PI*2 ?
+    ctx.arc(90,350,50,0,Math.PI*2);
+    ctx.fillStyle = '#CDCDCD';
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    // roue cercle droite
+    ctx.beginPath();
+    // Position 1 + 2 / 3 = grandeur / Math.PI*2 ?
+    ctx.arc(300,350,50,0,Math.PI*2);
+    ctx.fillStyle = '#CDCDCD';
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    </script>
